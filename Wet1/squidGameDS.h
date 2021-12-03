@@ -1,16 +1,17 @@
 #ifndef SQUID_GAME_DS_H
 #define SQUID_GAME_DS_H
 
-#include "genericRankTree.h"
+#include "AVLTree.h"
 #include "player.h"
 #include "group.h"
 
 
 class squidGameDS
 {
-    genericRankTree<Player,Player,Player::lvlComp()> all_players;
-    genericRankTree<Group> players_groups;
-    genericRankTree<Group> empty_groups;
+    AVLTree<Player> players_by_id;
+    AVLTree<Player> players_by_lvl;
+    AVLTree<Group> players_groups;
+    AVLTree<Group> empty_groups;
 };
 
 

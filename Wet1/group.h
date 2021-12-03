@@ -1,14 +1,14 @@
 #ifndef GROUP_H
 #define GROUP_H
 
-#include "genericRankTree.h"
+#include "AVLTree.h"
 #include "player.h"
 
 class Group
 {
     int id;
     int n;
-    genericRankTree<Player,Player,Player::lvlComp()> players;
+    AVLTree<Player> players;
     public:
     Group();
     ~Group()=default;
